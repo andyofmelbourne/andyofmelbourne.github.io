@@ -104,8 +104,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="211.5849"
-     inkscape:cy="37.188008"
+     inkscape:cx="111.07472"
+     inkscape:cy="36.177855"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -126,7 +126,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -143,18 +143,18 @@
        preserveAspectRatio="none"
        height="55.24501"
        width="98.213348"
-       xlink:href="/home/andyofmelbourne/Documents/2021/DESY_conference/DESY_2021_talk/overview_no_mll.png"
+       xlink:href="file:///home/andyofmelbourne/Documents/2021/DESY_conference/DESY_2021_talk/overview_no_mll.png"
        sodipodi:absref="/home/andyofmelbourne/Documents/2021/DESY_conference/DESY_2021_talk/overview_no_mll.png" />
     <image
        sodipodi:absref="/home/andyofmelbourne/Documents/2022/website/test2/images/siemens_star_frames.gif"
        xlink:href="siemens_star_frames.gif"
-       width="17.249842"
-       height="15.469758"
-       preserveAspectRatio="none"
-       style="display:inline;stroke-linecap:square;stroke-linejoin:round"
-       id="image8247"
+       y="40.411961"
        x="285.90436"
-       y="40.411961" />
+       id="image8247"
+       style="display:inline;stroke-linecap:square;stroke-linejoin:round"
+       preserveAspectRatio="none"
+       height="15.469758"
+       width="17.249842" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
        d="m 275.16666,35.156993 c 0,0 2.34243,4.895037 8.04444,7.133892"

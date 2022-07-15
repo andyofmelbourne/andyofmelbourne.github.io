@@ -1,1 +1,511 @@
-hello world
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <!-- helps with scaling somehow -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <script src="https://kit.fontawesome.com/e84ecf5fb7.js" crossorigin="anonymous"></script>
+
+  <!-- shown in the tab bar -->
+  <title>Andrew James Morgan</title>
+
+  <style>
+    @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600";
+    @import url(font-awesome.min.css);
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+   
+    /* Banner */
+    #banner_background {
+      background-image: url(images/UniMelb-Testimonial-2-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: bottom;
+      position: relative;
+    }
+
+
+    #banner_background:before {
+      content: '';
+      background-color: rgba(50, 50, 50, 0.85);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    #banner {
+      margin: auto;
+      max-width: 1400px;
+      color : rgba(255, 255, 255, 1);
+      font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+      text-align: center;
+      /* No idea why, but "relative" prevents text 
+      displaying below the background colour */
+      position: relative;
+      padding : 50px 50px 0 50px;
+    }
+    
+    #banner header {
+      padding : 8em 0 8em 0;
+    }
+    
+    #logo {
+      text-align: left;
+      float: left;
+      font-size: 1.2em;
+    }
+    
+    #nav {
+      text-align: right;
+      font-size: 1.2em;
+      border-style: none none solid none;
+      border-color: rgba(100, 100, 100,1);
+      border-width: 2px;
+      padding: 0 0 70px 0;
+    }
+
+    #nav a {
+      padding: 0 20px 0 0;
+    }
+
+    #nav a:last-child {
+      padding: 0 0 0 0;
+    }
+
+
+    #banner h1 {
+      /* prevents whitespace at the top of the page */
+      margin: 0;
+      font-weight: 400;
+      font-size: 3.5em;
+    }
+    
+    #banner a {
+      color : rgba(255, 255, 255, 1);
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    #research_logos {
+      padding: 8em 0 0 0; 
+    } 
+
+      .research_logo {
+        text-align: center; 
+        font-size: 24px;
+        font-weight: 600;
+        display: inline-block; 
+        padding: 0 100px 0 100px; 
+        border-style: none solid none none; 
+        border-color: rgba(100, 100, 100,1); 
+        border-width: 2px;
+      }
+  
+        .research_logo img {
+          height: 3em;
+          padding: 5px 0 5px 0; 
+        }
+  
+        .research_logo:first-child {
+          padding: 0 100px 0 0; 
+        }
+  
+        .research_logo:last-child {
+          border-style: none; 
+          padding: 0 0 0 100px; 
+        }
+    
+    /*
+    #banner a:hover {
+      color : rgba(255, 255, 255, 1);
+    }
+    */
+
+  /* Research */
+  .research {
+    padding : 2em 2em 2em 2em;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    max-width: 1300px;
+    margin: auto;
+    display: none;
+  }
+    
+    #SPI {
+      display: block;
+    }
+
+    .research h2 {
+      font-size: 2.00em;
+      font-weight: 400;
+      color: #555;
+      /*border-style: solid none none none;
+      border-color: rgba(150, 150, 150,1);*/
+    }
+
+    .research h2 + p {
+      color: #bbb;
+    }
+  
+    .research strong {
+      font-size: 1.00em;
+      font-weight: 600;
+      color: #555;
+    }
+    
+    .research p {
+      font-size: 1.50em;
+      font-weight: 400;
+      line-height: 1.5em;
+      color: #9a9a9a;
+      text-align: justify;
+    }
+  
+    .research object, .research img {
+      float: left;
+      width: 70%;
+      max-width: 800px;
+      padding : 0.5em 2em 2em 0;
+    }
+  
+    p.references {
+      clear: both;
+      font-size: 1.00em;
+    }
+  
+
+  /* CV */
+  #CV {
+    display: block;
+    margin: auto;
+    width: 800px;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    line-height: 1.5em;
+    color: #9a9a9a;
+  }
+
+    #CV h4 {
+      color: #555;
+    } 
+  
+    #CV strong {
+      color: #555;
+    } 
+
+    #CV a {
+      color: #9a9a9a;
+      text-decoration: none;
+    } 
+
+    #CV a:hover {
+      color: #555;
+    }
+
+    /*#CV img {
+      float: left;
+      height: 150px;
+    }*/
+
+  /* Footer */
+  #footer {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    background-color: #7a9fcb;
+    color : rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+    #footer p {
+      margin: 0
+    }
+
+    #footer a {
+      color : rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
+
+    #footer a:hover {
+      color: white;
+    }
+
+    #footer_container {
+      max-width: 1300px;
+      padding : 2em 2em 2em 2em;
+      /* prevents contact from growing larger than footer "clearfix hack"*/
+      overflow: auto;
+      margin: auto;
+    }
+
+    #contact {
+      text-align: left;
+      float: left;
+    }
+
+      #contact address {
+        font-style: normal;
+      }
+  
+    #links {
+      text-align: right;
+    }
+  
+    #footer h3 {
+      font-size: 1.75em;
+      font-weight: 400;
+      color: white;
+      line-height: 1.5em;
+      padding: 0;
+      margin: 0;
+    }
+
+  </style>
+</head>
+
+<!-- Scripts to reveal research panels -->
+<script>
+function show_SPI() {
+  hide_all();
+  document.getElementById("SPI").style.display = "block";
+}
+
+function show_MLL() {
+  hide_all();
+  document.getElementById("MLL").style.display = "block";
+}
+
+function show_ST() {
+  hide_all();
+  document.getElementById("ST").style.display = "block";
+}
+
+function show_OnDA() {
+  hide_all();
+  document.getElementById("OnDA").style.display = "block";
+}
+
+function hide_all() {
+  document.getElementById("SPI").style.display  = "none";
+  document.getElementById("MLL").style.display  = "none";
+  document.getElementById("ST").style.display   = "none";
+  document.getElementById("OnDA").style.display = "none";
+}
+</script>
+
+
+<body>
+
+  <!-- Banner -->
+  <div id="banner_background">
+    <div id="banner">
+  
+      <div id="top">
+        <div id="logo">
+          <strong>Andrew</strong> James <strong>Morgan</strong>
+        </div>
+        
+        <div id="nav">
+          <a href="index.html">Home</a>
+          <a href="https://scholar.google.com.au/citations?user=Pn3fpHcAAAAJ" target="_blank">Publications</a>
+          <a href="#CV">CV</a>
+          <a href="#footer">Contact</a>
+        </div>
+      </div>
+      
+      <header>
+      <h1>
+        Andrew James Morgan 
+      </h1>
+      
+      <h2>
+        ARC Discovery Early Career Researcher 
+        <a href="https://findanexpert.unimelb.edu.au/profile/198800-andrew-james-morgan">
+        @ University of Melbourne</a>
+      </h2>
+    
+      <div id = "research_logos">
+        <div class="research_logo">
+          <a href="#SPI" onclick="show_SPI()"> <img onclick="show_SPI()" src="images/SPI_logo.svg"></a> <br>
+          <a href="#SPI" onclick="show_SPI()">Single Particle Imaging </a>
+        </div>
+        
+        <div class="research_logo">
+          <a href="#MLL" onclick="show_MLL()"> <img src="images/MLL_logo.svg"></a> <br>
+          <a href="#MLL" onclick="show_MLL()"> X-ray Optics </a>
+        </div>
+ 
+        <div class="research_logo">
+          <a href="#ST" onclick="show_ST()"> <img src="images/ST_logo.svg"></a> <br>
+          <a href="#ST" onclick="show_ST()">Speckle-tracking </a>
+        </div>
+ 
+        <div class="research_logo">
+          <a href="#OnDA" onclick="show_OnDA()"> <img src="images/OnDA_logo.svg"></a> <br>
+          <a href="#OnDA" onclick="show_OnDA()">Real-time Analysis </a>
+        </div>
+      </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Research -->
+
+  <!-- SPI -->
+  <div class="research"  id="SPI">
+    <h2> Single Particle Imaging </h2>
+
+    <p> Use short and powerful x-ray pulses to outrun radiation damage and image small biomolecules  </p>
+
+    <!-- needs to be object rather than img to show linked gif inside -->
+    
+    <p>
+    <object data="images/SPI.svg" alt="Single Particle Imaging Experiment"></object>
+    Until recently, humankind has been unable to explore the atomic structure and dynamics of small biomolecules such as proteins and viruses in their native state. Thus we have been blind to many important processes that these molecules undergo, such as photosynthesis or how a virus capsid molecule (such as SARS‑CoV‑2) invades a human host cell. The problem is that biomolecules are damaged by the high energy radiation used to image them; and the greater the magnification, the more light is needed. 
+    </p>
+    <p>
+    X-ray free-electron lasers provide powerful and extremely short pulses of high energy light, that can scatter through a biomolecule in less than 50 femto-seconds. The high energy of the photons in these x-ray pulses allows one to probe a biomolecule's atomic structure and, more importantly, they are so short that they can scatter through the sample and form an image, before the radiation damage has time to deteriorate the sample's atomic structure. 
+    </p>
+    <p>
+    I participate in experiment design and execution, in addition to developing; novel techniques for analysing diffraction data to produce 3D-models of a sample's structure (phasing), real-time data analysis to assist with experiment execution and help with the design and characterisation of new x-ray optics to increase signal-to-noise.
+    </p>
+    
+    <p class="references"> 
+      <strong> References </strong><br>
+      1. Zhuang, Awel, et al. "Unsupervised learning approaches to characterizing heterogeneous samples using X-ray single-particle imaging" <em>IUCrJ</em> (2022)<br>
+      2. Ayyer, Xavier, et al. "3D diffractive imaging of nanoparticle ensembles using an x-ray laser" <em>Optica</em> (2021)<br>
+      3. Li, Nazari, et al. "Diffraction data from aerosolized Coliphage PR772 virus particles imaged with the Linac Coherent Light Source" <em>Scientific data</em> (2020)<br>
+      4. Ayyer, Morgan, et al. "Low-signal limit of X-ray single particle diffractive imaging" <em>Optics express</em> (2019)<br>
+      5. Rose, Bobkov, et al. "Single-particle imaging without symmetry constraints at an X-ray free-electron laser" <em>IUCrJ</em> (2018)<br>
+      6. Lundholm, Sellberg, et al. "Considerations for three-dimensional image reconstruction from experimental data in coherent diffractive imaging" <em>IUCrJ</em> (2018)
+    </p>
+  </div>
+
+  <!-- MLLs -->
+  <div class="research"  id="MLL">
+    <h2> X-ray Optics </h2>
+
+    <p> Novel lens design allows for nanoscale focusing with high energy light </p>
+
+    <p>
+      <object data="images/MLL.svg" alt="Wedged Multilayer Laue Lens"></object>
+      Wether one is looking at the stars, at microscopic specimens or shooting a film, the quality of modern images using optical light are limited, in the main, only by the size, shape and focal length of the lenses employed. In fact, the construction of these lenses is so refined and well understood, that optical light rays can be bent and recombined to form an image for which the sharpness and brightness is limited only by the fundamental properties of the light itself, such as the number and wavelength of the photons incident on the lens.
+    </p>
+
+    <p>
+      But lenses designed to focus x-ray wavelengths of light are far from ideal. The penetrating power that makes x-rays <em>useful</em> for imaging also makes focusing them technologically challenging. For high-energy x-rays the refractive index of suitable lens materials differs from unity by approximately 10<sup>-5</sup>, which means that a large number of refractive surfaces are required to deflect or focus a beam.
+    </p>
+
+    <p>
+      I work with a collaborative research team, led by Sasa Bajt and Henry Chapman, to design and characterise a new breed of x-ray lenses, called wedged multilayer Laue lenses, that can collect and focus x-rays with a greater fidelity than has previously been possible. 
+    </p>
+
+
+    <p class="references">
+      <strong> References </strong><br>
+      1. Prasciolu, Murray, et al. "On the use of multilayer Laue lenses with X-ray Free Electron Lasers" <em>arXiv</em> (2022)<br>
+      2. Morgan, Murray, et al. "Ptychographic X-ray speckle tracking with multi-layer Laue lens systems" <em>Journal of applied crystallography</em> (2020)<br>
+      3. Murray, Pedersen, et al. "Multilayer Laue lenses at high X-ray energies: performance and applications"  <em>Optics express</em> (2019)<br>
+      4. Bajt, Prasciolu, et al. "X-ray focusing with efficient high-NA multilayer Laue lenses" <em>Light: Science & Applications</em> (2018)<br>
+      5. Morgan, Prasciolu, et al. "High numerical aperture multilayer Laue lenses" <em>Scientific reports</em> (2015)
+    </p>
+  </div>
+
+  <!-- speckle-tracking -->
+  <div class="research" id="ST">
+    <h2> Speckle-tracking </h2>
+    
+    <p> Track geometric features in x-ray holograms for wavefront metrology </p>
+
+    <p>
+      <object data="images/Speckle-tracking.svg" alt="Speckle-tracking with MLLs"></object>
+      X-ray speckle-tracking can be used to determine the intensity and direction of x-rays passing through a sample. For this method, projection images (or ``shadows'') of a sample are recorded as the sample is translated across the x-ray wavefield. Features in these images are distorted, e.g. stretched or translated, by the curving wavefront of the x-rays. We can then characterise the wavefront, by mapping these distortions using the recorded images. This is helpful for imaging experiments and in assessing the performance of x-ray lenses. 
+    </p>
+
+    <p class="references">
+      <strong> References </strong><br>
+      1. Morgan, Quiney, et al. "Ptychographic X-ray speckle tracking" <em>Journal of applied crystallography</em> (2020)<br>
+      2. Morgan, Murray, et al. "Ptychographic X-ray speckle tracking with multi-layer Laue lens systems" <em>Journal of applied crystallography</em> (2020)<br>
+      3. Morgan, Murray, et al. "speckle-tracking: a software suite for ptychographic X-ray speckle tracking" <em>Journal of applied crystallography</em> (2020)
+    </p>
+  </div>
+
+  <!-- OnDA -->
+  <div class="research" id="OnDA">
+    <h2> Real-time Analysis </h2>
+    
+    <p> Process terabytes of data every second for real-time decision making in high throughput experiments </p>
+    
+    <p>
+      <img src="images/OnDA.jpg" alt="Online Data Analysis at the LCLS"/>
+        I am co-founder, along with Valerio Mariani and Chun Hong Yoon, of a free and open-source data analysis utility designed for fast online feedback during serial x-ray diffraction and scattering experiments: OnDA (online data analysis). OnDA contains real-time monitors for common types of serial x-ray imaging experiments and are capable of providing the essential information required for quick decision making in the face of extreme rates of data collection. OnDA monitors have proven to be invaluable tools in hundreds of experiments, especially for scoring and monitoring of diffraction data during serial crystallography experiments at both free-electron laser and synchrotron facilities. 
+    </p>
+
+    <p class="references">
+      <strong> References </strong><br>
+      1. Mariani, Morgan, et al. "OnDA: online data analysis and feedback for serial X-ray imaging" <em>Journal of applied crystallography</em> (2016)<br>
+      2. https://www.ondamonitor.com
+    </p>
+  </div>
+
+  <!-- CV -->
+  <div id="CV">
+
+    <img src="images/me-crop.png" style='display: inline-block; padding=0 0 30px 0;'>
+ 
+    <div style='display: inline-block'>
+    <h4>Past positions:</h4>
+      <p>
+        <strong>2018-22</strong> - Post-Doctoral Researcher, University of Melbourne<br/>
+        <strong>2013-18</strong> - Post-Doctoral Researcher, DESY, Hamburg<br/>
+        <strong>2008-13</strong> - PhD in Physics, University of Melbourne<br/>
+        <strong>2004-08</strong> - B.S. (Mathematics and Physics), University of Melbourne<br/>
+      </p>
+    </div>
+    <p style='text-align: center'>
+    <a href="AJM_short_CV.pdf">Short Academic CV (pdf)</a>
+    </p>
+  </div>
+
+
+  
+  <div id="footer">
+    <div id="footer_container">
+
+      <!-- contact -->
+      <div id="contact">
+        <h3>Contact:</h3>
+        <address>
+          Andrew James Morgan<br/>
+          ARC Discovery Early Career Researcher<br/>
+          University of Melbourne<br/>
+          <a href="https://maps.unimelb.edu.au/point?identifier=PAR;192;6;602"> 602 David Caro Building </a></br>
+          +61 3834 40392<br/>
+          <samp>morganaj [at] unimelb.edu.au</samp>
+        </address>
+      </div>
+  
+      <!-- Links -->
+      <div id="links">
+        <h3>Other Links:</h3>
+        <p style="padding-right:0.3em">
+          <a href="https://findanexpert.unimelb.edu.au/profile/198800-andrew-james-morgan" target="_blank">University of Melbourne profile page</a><br/>
+          <a href="https://github.com/andyofmelbourne/speckle-tracking" target="_blank">Speckle-tracking (github)</a><br/>
+        </p>
+      </div>
+  
+    </div>
+  </div>
+
+</body>
+</html>
